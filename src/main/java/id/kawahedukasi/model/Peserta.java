@@ -16,7 +16,7 @@ public class Peserta extends PanacheEntityBase {
     @Column(name = "name")
     public String name;
 
-    @Column(name = " email")
+    @Column(name = "email")
     public String email;
 
     @Column(name = "phone_number")
