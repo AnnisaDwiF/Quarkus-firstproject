@@ -1,2 +1,4 @@
-package id.kawahedukasi.model;public class Tugas {
+package id.kawahedukasi.model;
+
+public class Tugas {
 }

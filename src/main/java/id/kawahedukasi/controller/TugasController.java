@@ -1,2 +1,4 @@
-package id.kawahedukasi.controller;public class TugasController {
+package id.kawahedukasi.controller;
+
+public class TugasController {
 }
