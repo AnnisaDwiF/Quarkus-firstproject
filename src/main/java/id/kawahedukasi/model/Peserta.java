@@ -3,6 +3,7 @@ package id.kawahedukasi.model;
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "participant")
@@ -21,4 +22,6 @@ public class Peserta extends PanacheEntityBase {
 
     @Column(name = "phone_number")
     public String phoneNumber;
+
+
 }
