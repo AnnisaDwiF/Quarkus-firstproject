@@ -1,5 +1,6 @@
 package id.kawahedukasi.controller;
 
+import com.opencsv.exceptions.CsvValidationException;
 import id.kawahedukasi.DTO.FileFormDTO;
 import id.kawahedukasi.service.ExportService;
 import id.kawahedukasi.service.ImportService;
@@ -47,6 +48,17 @@ public class PesertaController {
         try{
             return importService.importExcel(request);
         } catch (IOException e){
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
+        }
+    }
+
+    @POST
+    @Path("/import/csv")
+    @Consumes(MediaType.MULTIPART_FORM_DATA)
+    public Response importCSV(@MultipartForm FileFormDTO request) {
+        try{
+            return importService.importCSV(request);
+        } catch (IOException | CsvValidationException e){
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
         }
     }
