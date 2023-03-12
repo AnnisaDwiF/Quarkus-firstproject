@@ -114,7 +114,7 @@ public class ExportService {
 //        Content-Disposition: attachment; filename="name_of_excel_file.xls"
         return Response.ok()
                 .type("text/csv")
-                .header("Content-Disposition", "attachment; filename=\"peserta_list_excel.csv\"")
+                .header("Content-Disposition", "attachment; filename=\"peserta_list_csv.csv\"")
                 .entity(file).build();
 
     }
