@@ -24,7 +24,7 @@ public class ScheduleService {
         logger.info("KawahEdukasi");
     }
 
-    @Scheduled(cron = "* * 21 * * ?")
+    @Scheduled(cron = "0 21 12 * *")
     public void generateSendEmailListPeserta() throws JRException, IOException {
         mailService.sendExcelToEmail("annisadwifebryantipnp@gmail.com");
         logger.info("send email success!");
